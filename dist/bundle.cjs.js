@@ -82,6 +82,8 @@ function _possibleConstructorReturn(self, call) {
 //
 //
 //
+//
+//
 var script = {
   name: 'App',
   data: function data() {
@@ -242,7 +244,12 @@ var __vue_render__ = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
-  return _c("RouterView")
+  return _c(
+    "transition",
+    { attrs: { name: "router-transitions" } },
+    [_c("RouterView")],
+    1
+  )
 };
 var __vue_staticRenderFns__ = [];
 __vue_render__._withStripped = true;
@@ -250,7 +257,7 @@ __vue_render__._withStripped = true;
   /* style */
   const __vue_inject_styles__ = function (inject) {
     if (!inject) return
-    inject("data-v-7478d8ea_0", { source: "\n#app {\n  font-family: \"Avenir\", Helvetica, Arial, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  text-align: center;\n  color: #2c3e50;\n  margin-top: 60px;\n}\n.full-width{\n  border-width: medium;\n  border-color: red;\n}\n", map: {"version":3,"sources":["/home/jose/projects/mediasan/modules/vue-content-ssa/src/application/App.vue"],"names":[],"mappings":";AAsBA;EACA,mDAAA;EACA,mCAAA;EACA,kCAAA;EACA,kBAAA;EACA,cAAA;EACA,gBAAA;AACA;AACA;EACA,oBAAA;EACA,iBAAA;AACA","file":"App.vue","sourcesContent":["<template>\n  <RouterView />\n</template>\n\n<script>\n\nexport default {\n  name: 'App',\n  data () {\n    return {\n      name: 'Number',\n      number: 0\n    }\n  },\n  computed: {\n  },\n  methods: {\n  }\n}\n</script>\n\n<style>\n#app {\n  font-family: \"Avenir\", Helvetica, Arial, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  text-align: center;\n  color: #2c3e50;\n  margin-top: 60px;\n}\n.full-width{\n  border-width: medium;\n  border-color: red;\n}\n</style>\n"]}, media: undefined });
+    inject("data-v-6aeea3e5_0", { source: "\n.page{\n  position: fixed;\n  width: inherit;\n}\n.content{\n  position: absolute;\n  margin: 0 25vw;\n  width: 50vw;\n  text-align: center;\n}\n.router-transitions-leave-active .icon-home{\n  animation: gelatine 1s;\n}\n.router-transitions-enter-active .icon-home{\n  animation: headimagehome 1s;\n}\n.router-transitions-enter-active {\n  animation: page 1s;\n}\n.router-transitions-leave-active {\n  animation: page 1s;\n}\n.router-transitions-enter-active .icon{\n  animation: headimage 1s;\n}\n.router-transitions-enter-active .content {\n  animation: fade 1s;\n}\n.router-transitions-leave-active .icon{\n  animation: headimage 1s reverse;\n}\n.router-transitions-leave-active .content {\n  animation: fade 1s reverse;\n}\n.icon{\n  position: fixed;\n  right: 100px;\n  width: 50px;\n}\n.icon img{\n  width: 100%;\n}\n.icon-home{\n  position: fixed;\n  width: 250px;\n  right: calc(50% - 125px);\n}\n.icon-home img{\n  width: 100%;\n}\n@keyframes headimagehome {\n0% {\n      opacity: 0;\n      right: calc(50% - 125px);\n      width: 250px;\n}\n50% {\n      opacity: 0;\n      right: calc(50% - 125px);\n      width: 250px;\n}\n51% {\n      opacity: 1;\n      right: calc(50% - 125px);\n      width: 250px;\n}\n100% {\n      opacity: 1;\n      right: calc(50% - 125px);\n      width: 250px;\n}\n}\n@keyframes headimage {\n0% {\n      opacity: 0;\n      right: calc(50% - 125px);\n      width: 250px;\n}\n49% {\n      opacity: 0;\n      right: calc(50% - 125px);\n      width: 250px;\n}\n50% {\n      opacity: 1;\n      right: calc(50% - 125px);\n      width: 250px;\n}\n63% {\n      opacity: 1;\n      right: calc(50% - 125px);\n      width: 250px;\n}\n100% {\n      opacity: 1;\n      right: 100px;\n      width: 50px;\n}\n}\n@keyframes fade {\n0%,50%  {\n      opacity: 0;\n      transform: translateY(250px);\n}\n75% {\n      transform: translateY(250px);\n      opacity: 1;\n}\n100% {\n      transform: translateY(0px);\n      opacity: 1;\n}\n}\n@keyframes page {\n0%, 100% {\n      opacity: 1;\n}\n}\n@keyframes gelatine{\n0%{\n    transform:scale(1, 1);\n    opacity: 1;\n}\n13%{\n    transform:scale(.9, 1.1);\n    opacity: 1;\n}\n25%{\n    transform:scale(1.1, .9);\n    opacity: 1;\n}\n37%{\n    transform:scale(.95, 1.05);\n    opacity: 1;\n}\n50%{\n    transform:scale(1, 1);\n    opacity: 1;\n}\n51%, 100%{\n    transform:scale(1, 1);\n    opacity:0;\n}\n}\n", map: {"version":3,"sources":["/home/jose/projects/mediasan/modules/vue-content-ssa/src/application/App.vue"],"names":[],"mappings":";AAuBA;EACA,eAAA;EACA,cAAA;AACA;AACA;EACA,kBAAA;EACA,cAAA;EACA,WAAA;EACA,kBAAA;AACA;AACA;EACA,sBAAA;AACA;AACA;EACA,2BAAA;AACA;AACA;EACA,kBAAA;AACA;AACA;EACA,kBAAA;AACA;AACA;EACA,uBAAA;AACA;AACA;EACA,kBAAA;AACA;AACA;EACA,+BAAA;AACA;AACA;EACA,0BAAA;AACA;AACA;EACA,eAAA;EACA,YAAA;EACA,WAAA;AACA;AACA;EACA,WAAA;AACA;AACA;EACA,eAAA;EACA,YAAA;EACA,wBAAA;AACA;AACA;EACA,WAAA;AACA;AAEA;AACA;MACA,UAAA;MACA,wBAAA;MACA,YAAA;AACA;AACA;MACA,UAAA;MACA,wBAAA;MACA,YAAA;AACA;AACA;MACA,UAAA;MACA,wBAAA;MACA,YAAA;AACA;AACA;MACA,UAAA;MACA,wBAAA;MACA,YAAA;AACA;AACA;AACA;AACA;MACA,UAAA;MACA,wBAAA;MACA,YAAA;AACA;AACA;MACA,UAAA;MACA,wBAAA;MACA,YAAA;AACA;AACA;MACA,UAAA;MACA,wBAAA;MACA,YAAA;AACA;AACA;MACA,UAAA;MACA,wBAAA;MACA,YAAA;AACA;AACA;MACA,UAAA;MACA,YAAA;MACA,WAAA;AACA;AACA;AACA;AACA;MACA,UAAA;MACA,4BAAA;AACA;AACA;MACA,4BAAA;MACA,UAAA;AACA;AACA;MACA,0BAAA;MACA,UAAA;AACA;AACA;AACA;AACA;MACA,UAAA;AACA;AACA;AACA;AACA;IACA,qBAAA;IACA,UAAA;AACA;AACA;IACA,wBAAA;IACA,UAAA;AACA;AACA;IACA,wBAAA;IACA,UAAA;AACA;AACA;IACA,0BAAA;IACA,UAAA;AACA;AACA;IACA,qBAAA;IACA,UAAA;AAEA;AACA;IACA,qBAAA;IACA,SAAA;AACA;AACA","file":"App.vue","sourcesContent":["<template>\n  <transition name=\"router-transitions\">\n    <RouterView />\n  </transition>\n</template>\n\n<script>\n\nexport default {\n  name: 'App',\n  data () {\n    return {\n      name: 'Number',\n      number: 0\n    }\n  },\n  computed: {\n  },\n  methods: {\n  }\n}\n</script>\n<style>\n.page{\n  position: fixed;\n  width: inherit;\n}\n.content{\n  position: absolute;\n  margin: 0 25vw;\n  width: 50vw;\n  text-align: center;\n}\n.router-transitions-leave-active .icon-home{\n  animation: gelatine 1s;\n}\n.router-transitions-enter-active .icon-home{\n  animation: headimagehome 1s;\n}\n.router-transitions-enter-active {\n  animation: page 1s;\n}\n.router-transitions-leave-active {\n  animation: page 1s;\n}\n.router-transitions-enter-active .icon{\n  animation: headimage 1s;\n}\n.router-transitions-enter-active .content {\n  animation: fade 1s;\n}\n.router-transitions-leave-active .icon{\n  animation: headimage 1s reverse;\n}\n.router-transitions-leave-active .content {\n  animation: fade 1s reverse;\n}\n.icon{\n  position: fixed;\n  right: 100px;\n  width: 50px;\n}\n.icon img{\n  width: 100%;\n}\n.icon-home{\n  position: fixed;\n  width: 250px;\n  right: calc(50% - 125px);\n}\n.icon-home img{\n  width: 100%;\n}\n\n@keyframes headimagehome {\n    0% {\n      opacity: 0;\n      right: calc(50% - 125px);\n      width: 250px;\n    }\n    50% {\n      opacity: 0;\n      right: calc(50% - 125px);\n      width: 250px;\n    }\n    51% {\n      opacity: 1;\n      right: calc(50% - 125px);\n      width: 250px;\n    }\n    100% {\n      opacity: 1;\n      right: calc(50% - 125px);\n      width: 250px;\n    }\n}\n@keyframes headimage {\n    0% {\n      opacity: 0;\n      right: calc(50% - 125px);\n      width: 250px;\n    }\n    49% {\n      opacity: 0;\n      right: calc(50% - 125px);\n      width: 250px;\n    }\n    50% {\n      opacity: 1;\n      right: calc(50% - 125px);\n      width: 250px;\n    }\n    63% {\n      opacity: 1;\n      right: calc(50% - 125px);\n      width: 250px;\n    }\n    100% {\n      opacity: 1;\n      right: 100px;\n      width: 50px;\n    }\n}\n@keyframes fade {\n    0%,50%  {\n      opacity: 0;\n      transform: translateY(250px);\n    }\n    75% {\n      transform: translateY(250px);\n      opacity: 1;\n    }\n    100% {\n      transform: translateY(0px);\n      opacity: 1;\n    }\n}\n@keyframes page {\n    0%, 100% {\n      opacity: 1;\n    }\n}\n@keyframes gelatine{\n  0%{\n    transform:scale(1, 1);\n    opacity: 1;\n  }\n  13%{\n    transform:scale(.9, 1.1);\n    opacity: 1;\n  }\n  25%{\n    transform:scale(1.1, .9);\n    opacity: 1;\n  }\n  37%{\n    transform:scale(.95, 1.05);\n    opacity: 1;\n  }\n  50%{\n    transform:scale(1, 1);\n    opacity: 1;\n\n  }\n  51%, 100%{\n    transform:scale(1, 1);\n    opacity:0;\n  }\n}\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
@@ -280,6 +287,12 @@ __vue_render__._withStripped = true;
 //
 //
 //
+//
+//
+//
+//
+//
+//
 var script$1 = {};
 
 /* script */
@@ -290,19 +303,40 @@ var __vue_render__$1 = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
-  return _c("div", [_vm._v("\n  Home\n")])
+  return _vm._m(0)
 };
-var __vue_staticRenderFns__$1 = [];
+var __vue_staticRenderFns__$1 = [
+  function() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("div", { staticClass: "page home" }, [
+      _c("div", { staticClass: "icon-home" }, [
+        _c("img", {
+          attrs: {
+            src:
+              "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjUwMCIgaGVpZ2h0PSIyMTU4IiB2aWV3Qm94PSIwIDAgMjU2IDIyMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaW4gbWVldCI+PHBhdGggZD0iTTIwNC44IDBIMjU2TDEyOCAyMjAuOCAwIDBoOTcuOTJMMTI4IDUxLjIgMTU3LjQ0IDBoNDcuMzZ6IiBmaWxsPSIjNDFCODgzIi8+CjxwYXRoIGQ9Ik0wIDBsMTI4IDIyMC44TDI1NiAwaC01MS4yTDEyOCAxMzIuNDggNTAuNTYgMEgweiIgZmlsbD0iIzQxQjg4MyIvPgo8cGF0aCBkPSJNNTAuNTYgMEwxMjggMTMzLjEyIDIwNC44IDBoLTQ3LjM2TDEyOCA1MS4yIDk3LjkyIDBINTAuNTZ6IiBmaWxsPSIjMzU0OTVFIi8+Cjwvc3ZnPgo=",
+            alt: ""
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "home-content" }, [
+        _c("h1", [_vm._v("Vue SSA example application")])
+      ])
+    ])
+  }
+];
 __vue_render__$1._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$1 = function (inject) {
     if (!inject) return
-    inject("data-v-3974ec22_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n", map: {"version":3,"sources":[],"names":[],"mappings":"","file":"Home.vue"}, media: undefined });
+    inject("data-v-67bcb9f8_0", { source: "\n.home-content[data-v-67bcb9f8]{\n  position: absolute;\n  top: 250px;\n  margin: 0 25vw;\n  width: 50vw;\n  text-align: center;\n}\n", map: {"version":3,"sources":["/home/jose/projects/mediasan/modules/vue-content-ssa/src/application/components/Pages/Home.vue"],"names":[],"mappings":";AAkBA;EACA,kBAAA;EACA,UAAA;EACA,cAAA;EACA,WAAA;EACA,kBAAA;AACA","file":"Home.vue","sourcesContent":["<template>\n  <div class=\"page home\">\n    <div class=\"icon-home\">\n      <img src=\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjUwMCIgaGVpZ2h0PSIyMTU4IiB2aWV3Qm94PSIwIDAgMjU2IDIyMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaW4gbWVldCI+PHBhdGggZD0iTTIwNC44IDBIMjU2TDEyOCAyMjAuOCAwIDBoOTcuOTJMMTI4IDUxLjIgMTU3LjQ0IDBoNDcuMzZ6IiBmaWxsPSIjNDFCODgzIi8+CjxwYXRoIGQ9Ik0wIDBsMTI4IDIyMC44TDI1NiAwaC01MS4yTDEyOCAxMzIuNDggNTAuNTYgMEgweiIgZmlsbD0iIzQxQjg4MyIvPgo8cGF0aCBkPSJNNTAuNTYgMEwxMjggMTMzLjEyIDIwNC44IDBoLTQ3LjM2TDEyOCA1MS4yIDk3LjkyIDBINTAuNTZ6IiBmaWxsPSIjMzU0OTVFIi8+Cjwvc3ZnPgo=\" alt=\"\">\n    </div>\n    <div class=\"home-content\">\n      <h1>Vue SSA example application</h1>\n\n    </div>\n  </div>\n</template>\n\n<script>\nexport default {\n}\n</script>\n\n<style lang=\"css\" scoped>\n  .home-content{\n    position: absolute;\n    top: 250px;\n    margin: 0 25vw;\n    width: 50vw;\n    text-align: center;\n  }\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__$1 = "data-v-3974ec22";
+  const __vue_scope_id__$1 = "data-v-67bcb9f8";
   /* module identifier */
   const __vue_module_identifier__$1 = undefined;
   /* functional template */
@@ -328,6 +362,15 @@ __vue_render__$1._withStripped = true;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var script$2 = {};
 
 /* script */
@@ -338,19 +381,53 @@ var __vue_render__$2 = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
-  return _c("div", [_vm._v("\n  About\n")])
+  return _vm._m(0)
 };
-var __vue_staticRenderFns__$2 = [];
+var __vue_staticRenderFns__$2 = [
+  function() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("div", { staticClass: "page about" }, [
+      _c("div", { staticClass: "icon" }, [
+        _c("img", {
+          attrs: {
+            src:
+              "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjUwMCIgaGVpZ2h0PSIyMTU4IiB2aWV3Qm94PSIwIDAgMjU2IDIyMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaW4gbWVldCI+PHBhdGggZD0iTTIwNC44IDBIMjU2TDEyOCAyMjAuOCAwIDBoOTcuOTJMMTI4IDUxLjIgMTU3LjQ0IDBoNDcuMzZ6IiBmaWxsPSIjNDFCODgzIi8+CjxwYXRoIGQ9Ik0wIDBsMTI4IDIyMC44TDI1NiAwaC01MS4yTDEyOCAxMzIuNDggNTAuNTYgMEgweiIgZmlsbD0iIzQxQjg4MyIvPgo8cGF0aCBkPSJNNTAuNTYgMEwxMjggMTMzLjEyIDIwNC44IDBoLTQ3LjM2TDEyOCA1MS4yIDk3LjkyIDBINTAuNTZ6IiBmaWxsPSIjMzU0OTVFIi8+Cjwvc3ZnPgo=",
+            alt: ""
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "content" }, [
+        _c("h1", [_vm._v("About suckless serverless applications")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "For questions about managing your applications, services and more, check out our FAQs. If you still have questions, see below for more ways to connect with us."
+          )
+        ]),
+        _vm._v(" "),
+        _c("h2", [_vm._v("mor about us in github")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v("you can take a look at "),
+          _c("a", { attrs: { href: "" } }, [_vm._v("here")])
+        ])
+      ])
+    ])
+  }
+];
 __vue_render__$2._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$2 = function (inject) {
     if (!inject) return
-    inject("data-v-ef62532a_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n", map: {"version":3,"sources":[],"names":[],"mappings":"","file":"About.vue"}, media: undefined });
+    inject("data-v-5baf0f30_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", map: {"version":3,"sources":[],"names":[],"mappings":"","file":"About.vue"}, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__$2 = "data-v-ef62532a";
+  const __vue_scope_id__$2 = "data-v-5baf0f30";
   /* module identifier */
   const __vue_module_identifier__$2 = undefined;
   /* functional template */
@@ -376,6 +453,23 @@ __vue_render__$2._withStripped = true;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var script$3 = {};
 
 /* script */
@@ -386,19 +480,66 @@ var __vue_render__$3 = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
-  return _c("div", [_vm._v("\n  About\n")])
+  return _vm._m(0)
 };
-var __vue_staticRenderFns__$3 = [];
+var __vue_staticRenderFns__$3 = [
+  function() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("div", { staticClass: "page news" }, [
+      _c("div", { staticClass: "icon" }, [
+        _c("img", {
+          attrs: {
+            src:
+              "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjUwMCIgaGVpZ2h0PSIyMTU4IiB2aWV3Qm94PSIwIDAgMjU2IDIyMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaW4gbWVldCI+PHBhdGggZD0iTTIwNC44IDBIMjU2TDEyOCAyMjAuOCAwIDBoOTcuOTJMMTI4IDUxLjIgMTU3LjQ0IDBoNDcuMzZ6IiBmaWxsPSIjNDFCODgzIi8+CjxwYXRoIGQ9Ik0wIDBsMTI4IDIyMC44TDI1NiAwaC01MS4yTDEyOCAxMzIuNDggNTAuNTYgMEgweiIgZmlsbD0iIzQxQjg4MyIvPgo8cGF0aCBkPSJNNTAuNTYgMEwxMjggMTMzLjEyIDIwNC44IDBoLTQ3LjM2TDEyOCA1MS4yIDk3LjkyIDBINTAuNTZ6IiBmaWxsPSIjMzU0OTVFIi8+Cjwvc3ZnPgo=",
+            alt: ""
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "content" }, [
+        _c("h1", [_vm._v("News")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "This is just an example and none of the information below will be updated"
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "grid" }, [
+          _c("div", { staticClass: "cell" }, [_vm._v("1")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "cell" }, [_vm._v("2")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "cell" }, [_vm._v("3")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "cell" }, [_vm._v("4")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "cell" }, [_vm._v("5")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "cell" }, [_vm._v("6")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "cell" }, [_vm._v("7")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "cell" }, [_vm._v("8")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "cell" }, [_vm._v("9")])
+        ])
+      ])
+    ])
+  }
+];
 __vue_render__$3._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$3 = function (inject) {
     if (!inject) return
-    inject("data-v-4615045e_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n", map: {"version":3,"sources":[],"names":[],"mappings":"","file":"News.vue"}, media: undefined });
+    inject("data-v-09f56637_0", { source: "\n.grid[data-v-09f56637]{\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  grid-gap: 10px;\n  grid-auto-rows: minmax(100px, auto);\n}\n.cell[data-v-09f56637]{\n  background-color: rgba(255, 255, 255, 0.8);\n  border: 1px solid rgba(100, 100, 100, 0.8);\n  border-radius: 10px;\n  padding: 20px;\n  font-size: 30px;\n  text-align: center;\n}\n", map: {"version":3,"sources":["/home/jose/projects/mediasan/modules/vue-content-ssa/src/application/components/Pages/News.vue"],"names":[],"mappings":";AA6BA;EACA,aAAA;EACA,qCAAA;EACA,cAAA;EACA,mCAAA;AACA;AACA;EACA,0CAAA;EACA,0CAAA;EACA,mBAAA;EACA,aAAA;EACA,eAAA;EACA,kBAAA;AACA","file":"News.vue","sourcesContent":["<template>\n  <div class=\"page news\">\n    <div class=\"icon\">\n      <img src=\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjUwMCIgaGVpZ2h0PSIyMTU4IiB2aWV3Qm94PSIwIDAgMjU2IDIyMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaW4gbWVldCI+PHBhdGggZD0iTTIwNC44IDBIMjU2TDEyOCAyMjAuOCAwIDBoOTcuOTJMMTI4IDUxLjIgMTU3LjQ0IDBoNDcuMzZ6IiBmaWxsPSIjNDFCODgzIi8+CjxwYXRoIGQ9Ik0wIDBsMTI4IDIyMC44TDI1NiAwaC01MS4yTDEyOCAxMzIuNDggNTAuNTYgMEgweiIgZmlsbD0iIzQxQjg4MyIvPgo8cGF0aCBkPSJNNTAuNTYgMEwxMjggMTMzLjEyIDIwNC44IDBoLTQ3LjM2TDEyOCA1MS4yIDk3LjkyIDBINTAuNTZ6IiBmaWxsPSIjMzU0OTVFIi8+Cjwvc3ZnPgo=\" alt=\"\">\n    </div>\n    <div class=\"content\">\n      <h1>News</h1>\n      <p>This is just an example and none of the information below will be updated</p>\n      <div class=\"grid\">\n          <div class=\"cell\">1</div>\n          <div class=\"cell\">2</div>\n          <div class=\"cell\">3</div>\n          <div class=\"cell\">4</div>\n          <div class=\"cell\">5</div>\n          <div class=\"cell\">6</div>\n          <div class=\"cell\">7</div>\n          <div class=\"cell\">8</div>\n          <div class=\"cell\">9</div>\n      </div>\n    </div>\n  </div>\n</template>\n\n<script>\nexport default {\n}\n</script>\n\n<style lang=\"css\" scoped>\n  .grid{\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    grid-gap: 10px;\n    grid-auto-rows: minmax(100px, auto);\n  }\n  .cell{\n    background-color: rgba(255, 255, 255, 0.8);\n    border: 1px solid rgba(100, 100, 100, 0.8);\n    border-radius: 10px;\n    padding: 20px;\n    font-size: 30px;\n    text-align: center;\n  }\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__$3 = "data-v-4615045e";
+  const __vue_scope_id__$3 = "data-v-09f56637";
   /* module identifier */
   const __vue_module_identifier__$3 = undefined;
   /* functional template */
@@ -429,6 +570,11 @@ __vue_render__$3._withStripped = true;
 //
 //
 //
+//
+//
+//
+//
+//
 var script$4 = {};
 
 /* script */
@@ -446,22 +592,34 @@ var __vue_staticRenderFns__$4 = [
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
-    return _c("div", [
-      _c("h1", [_vm._v("Contacts us")]),
-      _vm._v(" "),
-      _c("h2", { staticClass: "green" }, [_vm._v("We are here to help.")]),
-      _vm._v(" "),
-      _c("p", [
-        _vm._v(
-          "For questions about managing your applications, services and more, check out our FAQs. If you still have questions, see below for more ways to connect with us."
-        )
+    return _c("div", { staticClass: "page contacts" }, [
+      _c("div", { staticClass: "icon" }, [
+        _c("img", {
+          attrs: {
+            src:
+              "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjUwMCIgaGVpZ2h0PSIyMTU4IiB2aWV3Qm94PSIwIDAgMjU2IDIyMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaW4gbWVldCI+PHBhdGggZD0iTTIwNC44IDBIMjU2TDEyOCAyMjAuOCAwIDBoOTcuOTJMMTI4IDUxLjIgMTU3LjQ0IDBoNDcuMzZ6IiBmaWxsPSIjNDFCODgzIi8+CjxwYXRoIGQ9Ik0wIDBsMTI4IDIyMC44TDI1NiAwaC01MS4yTDEyOCAxMzIuNDggNTAuNTYgMEgweiIgZmlsbD0iIzQxQjg4MyIvPgo8cGF0aCBkPSJNNTAuNTYgMEwxMjggMTMzLjEyIDIwNC44IDBoLTQ3LjM2TDEyOCA1MS4yIDk3LjkyIDBINTAuNTZ6IiBmaWxsPSIjMzU0OTVFIi8+Cjwvc3ZnPgo=",
+            alt: ""
+          }
+        })
       ]),
       _vm._v(" "),
-      _c("h2", [_vm._v("contact us via github")]),
-      _vm._v(" "),
-      _c("p", [
-        _vm._v("you can submit tickets "),
-        _c("a", { attrs: { href: "" } }, [_vm._v("here")])
+      _c("div", { staticClass: "content" }, [
+        _c("h1", [_vm._v("Contacts us")]),
+        _vm._v(" "),
+        _c("h2", { staticClass: "green" }, [_vm._v("We are here to help.")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "For questions about managing your applications, services and more, check out our FAQs. If you still have questions, see below for more ways to connect with us."
+          )
+        ]),
+        _vm._v(" "),
+        _c("h2", [_vm._v("contact us via github")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v("you can submit tickets "),
+          _c("a", { attrs: { href: "" } }, [_vm._v("here")])
+        ])
       ])
     ])
   }
@@ -471,11 +629,11 @@ __vue_render__$4._withStripped = true;
   /* style */
   const __vue_inject_styles__$4 = function (inject) {
     if (!inject) return
-    inject("data-v-4503ec36_0", { source: "\nh1[data-v-4503ec36] {\n  color:#cacaca;\n}\n.title[data-v-4503ec36] {\n  color: green;\n}\n", map: {"version":3,"sources":["/home/jose/projects/mediasan/modules/vue-content-ssa/src/application/components/Pages/Contacts.vue"],"names":[],"mappings":";AAiBA;EACA,aAAA;AACA;AACA;EACA,YAAA;AACA","file":"Contacts.vue","sourcesContent":["<template>\n  <div>\n    <h1>Contacts us</h1>\n    <h2 class=\"green\">We are here to help.</h2>\n    <p>For questions about managing your applications, services and more, check out our FAQs. If you still have questions, see below for more ways to connect with us.</p>\n\n    <h2>contact us via github</h2>\n    <p>you can submit tickets <a href=\"\">here</a> </p>\n  </div>\n</template>\n\n<script>\nexport default {\n}\n</script>\n\n<style lang=\"css\" scoped>\nh1 {\n  color:#cacaca;\n}\n.title {\n  color: green;\n}\n</style>\n"]}, media: undefined });
+    inject("data-v-2aca9d00_0", { source: "\nh1 {\n  color:#808080;\n}\n", map: {"version":3,"sources":["/home/jose/projects/mediasan/modules/vue-content-ssa/src/application/components/Pages/Contacts.vue"],"names":[],"mappings":";AAsBA;EACA,aAAA;AACA","file":"Contacts.vue","sourcesContent":["<template>\n  <div class=\"page contacts\">\n    <div class=\"icon\">\n      <img src=\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjUwMCIgaGVpZ2h0PSIyMTU4IiB2aWV3Qm94PSIwIDAgMjU2IDIyMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaW4gbWVldCI+PHBhdGggZD0iTTIwNC44IDBIMjU2TDEyOCAyMjAuOCAwIDBoOTcuOTJMMTI4IDUxLjIgMTU3LjQ0IDBoNDcuMzZ6IiBmaWxsPSIjNDFCODgzIi8+CjxwYXRoIGQ9Ik0wIDBsMTI4IDIyMC44TDI1NiAwaC01MS4yTDEyOCAxMzIuNDggNTAuNTYgMEgweiIgZmlsbD0iIzQxQjg4MyIvPgo8cGF0aCBkPSJNNTAuNTYgMEwxMjggMTMzLjEyIDIwNC44IDBoLTQ3LjM2TDEyOCA1MS4yIDk3LjkyIDBINTAuNTZ6IiBmaWxsPSIjMzU0OTVFIi8+Cjwvc3ZnPgo=\" alt=\"\">\n    </div>\n    <div class=\"content\">\n      <h1>Contacts us</h1>\n      <h2 class=\"green\">We are here to help.</h2>\n      <p>For questions about managing your applications, services and more, check out our FAQs. If you still have questions, see below for more ways to connect with us.</p>\n\n      <h2>contact us via github</h2>\n      <p>you can submit tickets <a href=\"\">here</a> </p>\n    </div>\n  </div>\n</template>\n\n<script>\nexport default {\n}\n</script>\n\n<style>\nh1 {\n  color:#808080;\n}\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__$4 = "data-v-4503ec36";
+  const __vue_scope_id__$4 = undefined;
   /* module identifier */
   const __vue_module_identifier__$4 = undefined;
   /* functional template */
