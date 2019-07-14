@@ -1,12 +1,12 @@
 {
   "name": "vue-content-ssa",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "vue ssa",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.ems.js",
   "sideEffects": false,
   "scripts": {
-    "oprebuild": "rimraf dist",
+    "prebuild": "rimraf dist",
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "test": "jest",
@@ -50,5 +50,13 @@
     "vue-jest": "^3.0.4",
     "vue-template-compiler": "^2.6.10"
   },
-  "homepage": "https://github.com/suckless-serverless/vue-content-ssa#readme"
+  "peerDependencies": {
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.6"
+  },
+  "homepage": "https://github.com/suckless-serverless/vue-content-ssa#readme",
+  "dependencies": {
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.7"
+  }
 }

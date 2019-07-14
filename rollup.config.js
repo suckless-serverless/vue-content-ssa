@@ -23,7 +23,8 @@ export default {
       file: 'dist/bundle.umd.js',
       format: 'umd',
       globals: {
-        vue: 'Vue'
+        vue: 'Vue',
+        'vue-router': 'VueRouter'
       }
     }
   ],
