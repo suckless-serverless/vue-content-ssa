@@ -19,10 +19,12 @@ export default {
   methods: {
   }
 }
+
 </script>
 <style>
 .page{
   position: fixed;
+  top: 100px;
   width: inherit;
 }
 .content{

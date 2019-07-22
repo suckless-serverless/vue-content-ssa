@@ -9,6 +9,7 @@ const production = !process.env.ROLLUP_WATCH
 
 export default {
   input: 'src/index.js',
+  external: ['vue', 'vue-router'],
   output: [
     {
       file: 'dist/bundle.cjs.js',
@@ -19,7 +20,7 @@ export default {
       format: 'esm'
     },
     {
-      name: 'modvue',
+      name: 'vueContentSSA',
       file: 'dist/bundle.umd.js',
       format: 'umd',
       globals: {
